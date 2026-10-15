@@ -7,6 +7,7 @@ import { HeroSection } from '@/components/sections/hero-section';
 import { ProjectsSection } from '@/components/sections/projects-section';
 import { ResumeSection } from '@/components/sections/resume-section';
 import { SkillsSection } from '@/components/sections/skills-section';
+import { StatisticsSection } from '@/components/sections/statistics-section';
 import { TechWatchSection } from '@/components/sections/tech-watch-section';
 import { TimelineSection } from '@/components/sections/timeline-section';
 
@@ -16,6 +17,7 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <HeroSection />
+        <StatisticsSection />
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />

@@ -56,3 +56,25 @@ export interface AboutBlock {
   title: string;
   paragraphs: string[];
 }
+
+export type ObjectiveStatus = 'upcoming' | 'searching' | 'planned';
+
+export interface Objective {
+  id: string;
+  title: string;
+  detail: string;
+  status: ObjectiveStatus;
+  statusLabel: string;
+}
+
+export interface TerminalBlock {
+  id: string;
+  command: string;
+  outputLines: string[];
+}
+
+export interface Statistic {
+  id: string;
+  value: string;
+  label: string;
+}
