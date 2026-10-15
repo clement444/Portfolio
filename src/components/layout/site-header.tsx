@@ -12,6 +12,10 @@ const navigationLinks = getNavigationLinks();
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+  const menuButtonLabel = isMenuOpen
+    ? 'Fermer le menu de navigation'
+    : 'Ouvrir le menu de navigation';
+
   function closeMenu() {
     setIsMenuOpen(false);
   }
@@ -53,7 +57,7 @@ export function SiteHeader() {
           className='lg:hidden'
           aria-expanded={isMenuOpen}
           aria-controls='menu-mobile'
-          aria-label='Ouvrir le menu de navigation'
+          aria-label={menuButtonLabel}
           onClick={toggleMenu}
         >
           <Button.Icon as={isMenuOpen ? RiCloseLine : RiMenuLine} />

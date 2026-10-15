@@ -149,7 +149,9 @@ function CharCounter({
   current?: number;
   max?: number;
 } & React.HTMLAttributes<HTMLSpanElement>) {
-  if (current === undefined || max === undefined) return null;
+  if (current === undefined || max === undefined) {
+    return null;
+  }
 
   const isError = current > max;
 

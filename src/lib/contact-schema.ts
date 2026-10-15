@@ -17,11 +17,7 @@ export const contactSchema = z.object({
     .trim()
     .min(20, 'Le message doit contenir au moins 20 caractères.')
     .max(2000, 'Le message ne doit pas dépasser 2000 caractères.'),
-  website: z
-    .string()
-    .max(0, 'Le formulaire est invalide.')
-    .optional()
-    .default(''),
+  website: z.string().max(200).optional().default(''),
 });
 
 export type ContactPayload = z.infer<typeof contactSchema>;

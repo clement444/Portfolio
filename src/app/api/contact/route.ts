@@ -6,6 +6,8 @@ import { readSmtpConfiguration, sendContactMessage } from '@/lib/mailer';
 import { isRateLimited } from '@/lib/rate-limit';
 import type { ContactApiResponse } from '@/types/contact';
 
+const SUCCESS_MESSAGE = 'Message envoyé. Merci, je vous répondrai bientôt.';
+
 const GENERIC_ERROR_MESSAGE =
   "Le message n'a pas pu être envoyé. Merci de réessayer plus tard.";
 
@@ -41,7 +43,7 @@ export async function POST(request: Request) {
   }
 
   if (parsedBody.data.website.length > 0) {
-    return jsonResponse('Message envoyé. Merci, je vous répondrai bientôt.', 200);
+    return jsonResponse(SUCCESS_MESSAGE, 200);
   }
 
   const smtpConfiguration = readSmtpConfiguration();
@@ -64,5 +66,5 @@ export async function POST(request: Request) {
     return jsonResponse(GENERIC_ERROR_MESSAGE, 502);
   }
 
-  return jsonResponse('Message envoyé. Merci, je vous répondrai bientôt.', 200);
+  return jsonResponse(SUCCESS_MESSAGE, 200);
 }
