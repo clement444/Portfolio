@@ -10,14 +10,16 @@ export function TechWatchSection() {
   return (
     <PageSection
       id='veille'
+      eyebrow='Veille'
       title='Veille technologique'
       description='Articles et ressources que je suis pour rester à jour en cybersécurité.'
+      isTinted
     >
-      <ul className='flex flex-col gap-4'>
+      <ul className='grid gap-4 md:grid-cols-2'>
         {techWatchItems.map((item) => (
           <li
             key={item.id}
-            className='rounded-xl bg-bg-white-0 p-5 ring-1 ring-inset ring-stroke-soft-200'
+            className='rounded-2xl bg-bg-white-0 p-6 shadow-regular-xs ring-1 ring-inset ring-stroke-soft-200'
           >
             <h3 className='text-label-md text-text-strong-950'>{item.title}</h3>
             <p className='mt-2 text-paragraph-sm text-text-sub-600'>

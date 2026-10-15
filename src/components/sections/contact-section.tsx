@@ -9,14 +9,15 @@ export function ContactSection() {
   return (
     <PageSection
       id='contact'
-      title='Contact'
+      eyebrow='Contact'
+      title='Parlons de votre projet'
       description="Pour une alternance, un stage ou une question, écrivez-moi avec le formulaire ou par un des liens ci-dessous."
     >
-      <div className='grid gap-10 md:grid-cols-[1fr_minmax(0,320px)]'>
+      <div className='mx-auto grid max-w-5xl gap-10 rounded-3xl bg-bg-white-0 p-6 shadow-regular-md ring-1 ring-inset ring-stroke-soft-200 sm:p-10 md:grid-cols-[1fr_minmax(0,260px)]'>
         <ContactForm />
 
-        <div>
-          <h3 className='text-label-md text-text-strong-950'>Liens</h3>
+        <div className='md:border-l md:border-stroke-soft-200 md:pl-10'>
+          <h3 className='text-label-md text-text-strong-950'>Liens directs</h3>
           <ul className='mt-4 flex flex-col gap-3'>
             <li>
               <LinkButton.Root asChild variant='gray' size='medium'>
