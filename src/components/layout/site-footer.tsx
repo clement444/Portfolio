@@ -4,8 +4,8 @@ export function SiteFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className='border-t border-stroke-soft-200 bg-bg-weak-50'>
-      <div className='mx-auto flex w-full max-w-5xl flex-col gap-3 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6'>
+    <footer className='border-t border-stroke-soft-200 bg-bg-white-0'>
+      <div className='mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6'>
         <p className='text-paragraph-sm text-text-sub-600'>
           {currentYear} {profile.fullName}
         </p>
